@@ -1,0 +1,16 @@
+@mixin flex-props($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin text-dec ($family, $size, $color) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin container-par($max, $width: 100%) {
+  max-width: $max;
+  width: $width;
+}
