@@ -164,7 +164,21 @@ body {
 
 .primary-header .logo-image img {
   width: 400px;
-  padding: 15px;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+@media (max-width: 500px) {
+  .primary-header .logo-image img {
+    width: 300px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .primary-header .logo-image img {
+    width: 220px;
+  }
 }
 
 .primary-header .primary-navigation[data-visible="true"] {
@@ -182,7 +196,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .primary-header .primary-navigation .active {
@@ -239,19 +253,20 @@ body {
 @media (max-width: 1024px) {
   .primary-header .mobile-nav-toggle {
     position: absolute;
-    width: 40px;
+    width: 30px;
     background-color: transparent;
-    background-image: url(../images/burger.png);
+    background-image: url(../images/burger3.png);
     display: block;
     border: none;
     aspect-ratio: 1;
-    top: 60px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     z-index: 10;
   }
-  .primary-header .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url(../images/x2.png);
-  }
+}
+
+.primary-header .mobile-nav-toggle[aria-expanded="true"] {
+  background-image: url(../images/x3.png);
 }
 
 body {
