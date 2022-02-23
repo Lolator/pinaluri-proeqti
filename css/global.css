@@ -222,7 +222,7 @@ header {
 }
 
 .primary-header .primary-navigation a {
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
   font-size: clamp(10px, 8vw, 30px);
 }
