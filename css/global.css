@@ -144,7 +144,7 @@ a {
   margin: 0 auto;
 }
 
-.container-crew .crew-wrapper, .contact-wrapper {
+.services-text-dec, .container-crew .crew-wrapper, .contact-wrapper {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(9px);
           backdrop-filter: blur(9px);
@@ -740,6 +740,11 @@ footer h3 {
   background: url(../images/space4.jpg);
 }
 
+.services-text-dec {
+  padding: 10px 8px;
+  border-radius: 8px;
+}
+
 @media (max-width: 1224px) {
   .reverce-2,
   .noreverce-2 {
@@ -808,7 +813,6 @@ footer h3 {
   font-family: "Montserrat", sans-serif;
   color: white;
   font-size: clamp(15px, 10vw, 25px);
-  margin-bottom: clamp(50px, 10vw, 100px);
   line-height: 25px;
 }
 

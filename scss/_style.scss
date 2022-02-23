@@ -491,6 +491,14 @@ footer {
 
 //----------Ourserviceslist----------//
 
+.services-text-dec {
+  @extend %blur-props;
+  padding: 10px 8px;
+  border-radius: 8px;
+}
+
+
+
 .reverce-2,
 .noreverce-2 {
   @media (max-width: 1224px) {
@@ -549,7 +557,7 @@ footer {
       color: $headertextcolor;
       font-size: clamp(15px, 10vw, 25px);
 
-      margin-bottom: clamp(50px, 10vw, 100px);
+     // margin-bottom: clamp(50px, 10vw, 100px);
       line-height: 25px;
     }
 
