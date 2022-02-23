@@ -381,7 +381,7 @@ footer h3 {
 
 .coming-soon .lpcd-text-decoration {
   margin-top: clamp(350px, 60vw, 600px);
-  margin-bottom: clamp(350px, 40vw, 800px);
+  margin-bottom: clamp(350px, 60vw, 800px);
 }
 
 @media (max-width: 650px) {
