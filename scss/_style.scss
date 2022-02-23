@@ -536,7 +536,7 @@ footer {
   @extend %container-props;
 
   .service-list-wrapper:last-child {
-    padding-bottom: clamp(100px, 15vw, 150px);
+    padding-bottom: clamp(100px, 15vw, 200px);
   }
 
   .service-list-wrapper {
