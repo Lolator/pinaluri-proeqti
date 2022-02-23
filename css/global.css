@@ -823,7 +823,7 @@ footer h3 {
 
 @media (max-width: 1224px) {
   .service-list-container .service-list-wrapper img {
-    width: 500px;
+    width: 600px;
     max-width: 100%;
   }
 }
