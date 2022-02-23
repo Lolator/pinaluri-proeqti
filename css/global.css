@@ -177,7 +177,7 @@ header {
 }
 
 .primary-header .logo-image img {
-  width: 400px;
+  width: 300px;
   padding: 20px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -224,7 +224,7 @@ header {
 .primary-header .primary-navigation a {
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: clamp(10px, 8vw, 30px);
+  font-size: clamp(10px, 8vw, 25px);
 }
 
 .primary-header .primary-navigation a:hover {
@@ -590,7 +590,9 @@ footer h3 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .os-container .os-wrapper-s-1 h2,
+  .os-container .os-wrapper-s-1 h2 {
+    text-align: center;
+  }
   .os-container .os-wrapper-s-1 p {
     text-align: center;
   }
@@ -634,7 +636,7 @@ footer h3 {
   letter-spacing: 1px;
 }
 
-.os-container .os-wrapper-s-2 p {
+.os-container .os-wrapper-s-2 a {
   font-family: "Orbitron", sans-serif;
   color: black;
   font-size: clamp(20px, 10vw, 32px);

@@ -19,7 +19,7 @@ header {
 
   .logo-image {
     img {
-      width: 400px;
+      width: 300px;
       padding: 20px;
       object-fit: cover;
 
@@ -53,7 +53,7 @@ header {
     a {
       font-family: $testfont;
       color: $headertextcolor;
-      font-size: clamp(10px, 8vw, 30px);
+      font-size: clamp(10px, 8vw, 25px);
     }
 
     a:hover {
@@ -369,7 +369,10 @@ footer {
 
       flex-direction: column;
 
-      h2,
+      h2 {
+        text-align: center;
+      }
+
       p {
         text-align: center;
       }
@@ -409,7 +412,7 @@ footer {
   .os-wrapper-s-2 {
     @extend %container-props;
 
-    p {
+    a {
       font-family: $hmmmfont;
       color: $cardtextcolor;
       font-size: clamp(20px, 10vw, 32px);
@@ -487,6 +490,14 @@ footer {
     }
   }
 }
+
+//----------Ourserviceslist----------//
+
+
+
+
+
+
 
 //-----------------------------OurCrew-----------------------------//
 
