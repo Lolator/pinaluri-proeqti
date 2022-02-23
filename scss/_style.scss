@@ -191,8 +191,8 @@ footer {
   justify-content: center;
 
   .lpcd-text-decoration {
-   margin-top: clamp(350px, 60vw, 600px);
-   margin-bottom: clamp(350px, 60vw, 800px);
+    margin-top: clamp(350px, 60vw, 600px);
+    margin-bottom: clamp(350px, 60vw, 800px);
 
     @media (max-width: 650px) {
       width: 90%;
@@ -243,11 +243,12 @@ footer {
     flex-direction: column;
     text-align: center;
 
-    @media (max-width:1200px) {
+    @media (max-width: 1200px) {
       width: 90%;
     }
 
-    h1, p {
+    h1,
+    p {
       font-family: $hmmmfont;
       color: $headertextcolor;
       letter-spacing: 2px;
@@ -269,7 +270,7 @@ footer {
       margin-bottom: clamp(100px, 10vw, 150px);
       border-radius: 5px;
 
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         max-width: 800px;
         width: 100%;
       }
@@ -291,44 +292,41 @@ footer {
     flex-direction: column;
     text-align: center;
 
-      @media (max-width:1200px) {
-        width: 90%;
-      }
-  
-      h1, p {
-        font-family: $hmmmfont;
-        color: $headertextcolor;
-        letter-spacing: 2px;
-      }
-  
-      h1 {
-        margin-top: clamp(100px, 10vw, 250px);
-        margin-bottom: 30px;
-  
-        font-size: clamp(25px, 10vw, 40px);
-      }
-  
-      p {
-        margin-bottom: clamp(50px, 10vw, 100px);
-        line-height: 25px;
-   }
-
-   img {
-     width: 1200px;
-    margin-bottom: clamp(100px, 10vw, 400px);
-    border-radius: 5px;
-
-    @media (max-width:1200px) {
-      max-width: 900px;
-      width: 100%;
+    @media (max-width: 1200px) {
+      width: 90%;
     }
+
+    h1,
+    p {
+      font-family: $hmmmfont;
+      color: $headertextcolor;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      margin-top: clamp(100px, 10vw, 250px);
+      margin-bottom: 30px;
+
+      font-size: clamp(25px, 10vw, 40px);
+    }
+
+    p {
+      margin-bottom: clamp(50px, 10vw, 100px);
+      line-height: 25px;
+    }
+
+    img {
+      width: 1200px;
+      margin-bottom: clamp(100px, 10vw, 400px);
+      border-radius: 5px;
+
+      @media (max-width: 1200px) {
+        max-width: 900px;
+        width: 100%;
+      }
     }
   }
 }
-
-
-
-
 
 //-----------------------------Services-----------------------------//
 
@@ -493,11 +491,80 @@ footer {
 
 //----------Ourserviceslist----------//
 
+.reverce-2,
+.noreverce-2 {
+  @media (max-width: 1224px) {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+.reverce-2 {
+  @media (max-width: 1224px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.noreverce-2 {
+  @media (max-width: 1224px) {
+    flex-direction: column;
+  }
+}
+
+.more {
+  display: none;
+}
+
+.service-list {
+  background-image: url(../images/space6.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.service-list-container {
+  @extend %container-props;
+
+  .service-list-wrapper:last-child {
+    padding-bottom: clamp(100px, 15vw, 150px);
+  }
+
+  .service-list-wrapper {
+    @include flex-props(space-between, center);
+    gap: 30px;
+    //padding-bottom: clamp(100px, 20vw, 150px);
+    padding-top: clamp(50px, 15vw, 250px);
+
+    h1 {
+      font-family: $hmmmfont;
+      color: $headertextcolor;
+      font-size: clamp(25px, 10vw, 40px);
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-family: $testfont;
+      color: $headertextcolor;
+      font-size: clamp(15px, 10vw, 25px);
+
+      margin-bottom: clamp(50px, 10vw, 100px);
+      line-height: 25px;
+    }
+
+    img {
+      width: 400px;
+      border-radius: 5px;
 
 
-
-
-
+      @media (max-width: 1224px) {
+        width: 500px;
+        max-width: 100%;
+      }
+    }
+  }
+}
 
 //-----------------------------OurCrew-----------------------------//
 
@@ -516,13 +583,13 @@ footer {
     }
 
     .reverce {
-      @media (max-width: 1200px) {
+      @media (max-width: 1220px) {
         flex-direction: column-reverse;
       }
     }
 
     .noreverce {
-      @media (max-width: 1200px) {
+      @media (max-width: 1220px) {
         flex-direction: column;
       }
     }
@@ -567,9 +634,9 @@ footer {
         );
       }
 
-     img:hover {
-       cursor: pointer;
-     }
+      img:hover {
+        cursor: pointer;
+      }
 
       img {
         width: 350px;
