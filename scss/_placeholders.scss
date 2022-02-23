@@ -7,3 +7,9 @@
   background: hsla(0, 0%, 100%, 0.1);
   backdrop-filter: blur(9px);
 }
+
+%background-props {
+  background-image: url(../images/test2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}

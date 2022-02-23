@@ -8,7 +8,7 @@ header {
     rgba(41, 40, 38, 1) 0%,
     rgba(4, 64, 109, 1) 49%
   );
-  //position: fixed;
+  position: fixed;
   width: 100%;
   z-index: 9999;
 }
@@ -51,9 +51,9 @@ header {
     }
 
     a {
-      font-family: $paragrapfont;
+      font-family: $headerfont;
       color: $headertextcolor;
-      font-size: clamp(15px, 10vw, 32px);
+      font-size: clamp(10px, 8vw, 30px);
     }
 
     a:hover {
@@ -109,11 +109,11 @@ header {
 
 //-----------------------------Main-----------------------------//
 
-body {
-  //background-image: url("../images/test2.jpg");
+/*body {
+  background-image: url("../images/test2.jpg");
   background-repeat: no-repeat;
-  //@extend %container-props;
-}
+  @extend %container-props;
+}*/
 
 //-----------------------------Footer-----------------------------//
 
@@ -180,8 +180,11 @@ footer {
 
 //-----------------------------LandingPage-----------------------------//
 
+.lp-container {
+  @extend %background-props;
+}
+
 .coming-soon {
-  background-image: url(../images/test2.jpg);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -189,8 +192,7 @@ footer {
 
   .lpcd-text-decoration {
     margin-top: clamp(350px, 60vw, 600px);
-    margin-bottom: clamp(350px, 46vw, 400px);
-    border-radius: 5px;
+    margin-bottom: clamp(350px, 40vw, 800px);
 
     @media (max-width: 650px) {
       width: 90%;
@@ -227,23 +229,326 @@ footer {
   }
 }
 
+//----------Video----------//
+
+.video-wrapper {
+  background: url(../images/space4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+
+  .video-section {
+    @extend %container-props;
+    @include flex-props(space-between, center);
+    flex-direction: column;
+    text-align: center;
+
+    @media (max-width:1200px) {
+      width: 90%;
+    }
+
+    h1, p {
+      font-family: $hmmmfont;
+      color: $headertextcolor;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      margin-top: clamp(50px, 10vw, 100px);
+      margin-bottom: 30px;
+
+      font-size: clamp(25px, 10vw, 40px);
+    }
+
+    p {
+      margin-bottom: clamp(50px, 10vw, 100px);
+      line-height: 25px;
+    }
+
+    video {
+      margin-bottom: clamp(100px, 10vw, 150px);
+      border-radius: 5px;
+
+      @media (max-width:1200px) {
+        max-width: 800px;
+        width: 100%;
+      }
+    }
+  }
+}
+
 //-----------------------------Services-----------------------------//
 
 .os-container {
-  @extend %container-props;
+  @extend %background-props;
+
+  padding-top: clamp(250px, 25vw, 350px);
+  padding-bottom: clamp(150px, 25vw, 220px);
+
+  .margin-bottom-h1-os {
+    margin-bottom: 80px;
+  }
+
+  & > h1 {
+    font-family: $hmmmfont;
+    color: $headertextcolor;
+    font-size: clamp(35px, 10vw, 60px);
+
+    text-align: center;
+  }
+
+  & > p {
+    @include text-dec($hmmmfont, 25px, $headertextcolor);
+    line-height: 40px;
+
+    text-align: center;
+  }
+
+  .os-wrapper-s-1 {
+    @include flex-props(space-between, center);
+    @extend %container-props;
+    gap: 50px;
+    padding: 100px 0px;
+    width: 95%;
+
+    @media (max-width: 1040px) {
+      width: 95%;
+
+      flex-direction: column;
+
+      h2,
+      p {
+        text-align: center;
+      }
+    }
+
+    img:hover {
+      opacity: 0.8;
+      transform: scale(0.98);
+    }
+
+    img {
+      width: 700px;
+      border-radius: 5px;
+      transition: 0.3s ease-in;
+
+      @media (max-width: 1024px) {
+        max-width: 700px;
+        width: 100%;
+      }
+    }
+
+    h2 {
+      @include text-dec($headerfont, 30px, $headertextcolor);
+      line-height: 60px;
+      border-bottom: 3px solid $headertextcolor;
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include text-dec($paragrapfont, 22px, $headertextcolor);
+      line-height: 25px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .os-wrapper-s-2 {
+    @extend %container-props;
+
+    p {
+      font-family: $hmmmfont;
+      color: $cardtextcolor;
+      font-size: clamp(20px, 10vw, 32px);
+    }
+
+    .container-services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "img1 img1 img2 img3"
+        "img4 img5 img6 img6";
+
+      .img1 {
+        grid-area: img1;
+      }
+      .img2 {
+        grid-area: img2;
+      }
+      .img3 {
+        grid-area: img3;
+      }
+      .img4 {
+        grid-area: img4;
+      }
+      .img5 {
+        grid-area: img5;
+      }
+      .img6 {
+        grid-area: img6;
+      }
+
+      grid-gap: 10px;
+
+      @media (max-width: 1300px) {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+          "img1 img1"
+          "img2 img3"
+          "img6 img6"
+          "img4 img5";
+      }
+    }
+    .container-services > div {
+      border-radius: 5px;
+      cursor: pointer;
+      height: clamp(130px, 20vw, 210px);
+      background-size: cover;
+      background-attachment: fixed;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      transition: all 0.3s ease-in;
+    }
+
+    .container-services > div:hover {
+      opacity: 0.8;
+      transform: scale(0.98);
+    }
+
+    .bg1 {
+      background: url(../images/space5.jpg);
+    }
+
+    .bg2 {
+      background: url(../images/space4.jpg);
+    }
+  }
+}
+
+//-----------------------------ContactPage-----------------------------//
+
+.container-crew {
+  @extend %background-props;
+  padding-bottom: clamp(100px, 20vw, 150px);
+  padding-top: clamp(175px, 20vw, 250px);
+
+  .crew-wrapper {
+    @extend %container-props;
+    @extend %blur-props;
+    border-radius: 10px;
+
+    @media (max-width: 1200px) {
+      width: 90%;
+    }
+
+    .reverce {
+      @media (max-width: 1200px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .noreverce {
+      @media (max-width: 1200px) {
+        flex-direction: column;
+      }
+    }
+
+    & > h1,
+    & > p {
+      text-align: center;
+      font-family: $hmmmfont;
+      color: $headertextcolor;
+      letter-spacing: 2px;
+    }
+
+    & > h1 {
+      padding-top: 40px;
+      font-size: clamp(35px, 10vw, 60px);
+    }
+
+    & > p {
+      font-size: clamp(15px, 10vw, 25px);
+      padding-bottom: 30px;
+    }
+
+    .crew-content {
+      @include flex-props(space-between, center);
+      gap: 30px;
+
+      padding: 65px 65px;
+
+      @media (max-width: 1200px) {
+        padding: 55px 15px;
+      }
+
+      .crew-text-dec {
+        border-radius: 5px;
+        padding: 25px;
+
+        background: rgb(41, 40, 38);
+        background: linear-gradient(
+          77deg,
+          rgba(41, 40, 38, 1) 0%,
+          rgba(4, 64, 109, 1) 49%
+        );
+      }
+
+      img {
+        width: 350px;
+        border-bottom: 3px solid white;
+        transition: 0.2s ease-in-out;
+
+        @media (max-width: 1200px) {
+          max-width: 450px;
+          width: 100%;
+        }
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+
+      h2 {
+        font-family: $hmmmfont;
+        font-size: clamp(10px, 9vw, 30px);
+        color: $headertextcolor;
+        line-height: 50px;
+        letter-spacing: 3px;
+      }
+
+      p {
+        font-family: $paragrapfont;
+        font-size: clamp(10px, 7vw, 22px);
+        color: $cardtextcolor;
+        line-height: 28px;
+      }
+    }
+  }
 }
 
 //-----------------------------ContactPage-----------------------------//
 
 .contact-section {
-  background-image: url(../images/test2.jpg);
+  @extend %background-props;
+
   padding-bottom: clamp(100px, 20vw, 150px);
-  padding-top: clamp(100px, 20vw, 150px);
+  padding-top: clamp(175px, 20vw, 250px);
 }
 
 .contact-wrapper {
   @extend %container-props;
   @extend %blur-props;
+  border-radius: 10px;
+
   width: 95%;
   margin-left: auto;
   margin-right: auto;
@@ -281,14 +586,13 @@ footer {
     background: #90d9e5;
   }
 
-  .container {
+  .container-contact {
     padding: 20px;
     margin-bottom: 30px;
 
     form {
       display: flex;
       flex-direction: column;
-
 
       label {
         font-family: $hmmmfont;
@@ -343,7 +647,7 @@ footer {
     }
 
     .contact-card:hover {
-      transform: scale(1.1);
+      transform: scale(0.98);
       cursor: pointer;
     }
 
@@ -354,10 +658,13 @@ footer {
         rgba(41, 40, 38, 1) 0%,
         rgba(4, 64, 109, 1) 49%
       );
+
       height: 180px;
       width: 220px;
       border: 3px solid black;
       border-radius: 5px;
+
+      transition: 0.3s ease-in;
 
       @media (max-width: 1024px) {
         width: 50%;
