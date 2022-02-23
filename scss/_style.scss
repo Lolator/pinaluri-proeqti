@@ -277,6 +277,59 @@ footer {
   }
 }
 
+//----------Section3lp----------//
+
+.section-3-lp {
+  background-image: url(../images/space5.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+
+  .section-3-lpwrapper {
+    @extend %container-props;
+    @include flex-props(space-between, center);
+    flex-direction: column;
+    text-align: center;
+
+      @media (max-width:1200px) {
+        width: 90%;
+      }
+  
+      h1, p {
+        font-family: $hmmmfont;
+        color: $headertextcolor;
+        letter-spacing: 2px;
+      }
+  
+      h1 {
+        margin-top: clamp(100px, 10vw, 250px);
+        margin-bottom: 30px;
+  
+        font-size: clamp(25px, 10vw, 40px);
+      }
+  
+      p {
+        margin-bottom: clamp(50px, 10vw, 100px);
+        line-height: 25px;
+   }
+
+   img {
+     width: 1200px;
+    margin-bottom: clamp(100px, 10vw, 400px);
+    border-radius: 5px;
+
+    @media (max-width:1200px) {
+      max-width: 900px;
+      width: 100%;
+    }
+    }
+  }
+}
+
+
+
+
+
 //-----------------------------Services-----------------------------//
 
 .os-container {
@@ -325,6 +378,7 @@ footer {
     img:hover {
       opacity: 0.8;
       transform: scale(0.98);
+      cursor: pointer;
     }
 
     img {
@@ -434,7 +488,7 @@ footer {
   }
 }
 
-//-----------------------------ContactPage-----------------------------//
+//-----------------------------OurCrew-----------------------------//
 
 .container-crew {
   @extend %background-props;
@@ -501,6 +555,10 @@ footer {
           rgba(4, 64, 109, 1) 49%
         );
       }
+
+     img:hover {
+       cursor: pointer;
+     }
 
       img {
         width: 350px;
