@@ -19,7 +19,7 @@ header {
 
   .logo-image {
     img {
-      width: 300px;
+      width: 275px;
       padding: 20px;
       object-fit: cover;
 
@@ -53,7 +53,7 @@ header {
     a {
       font-family: $testfont;
       color: $headertextcolor;
-      font-size: clamp(10px, 8vw, 25px);
+      font-size: clamp(10px, 8vw, 20px);
     }
 
     a:hover {

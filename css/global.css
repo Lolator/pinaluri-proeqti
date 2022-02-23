@@ -177,7 +177,7 @@ header {
 }
 
 .primary-header .logo-image img {
-  width: 300px;
+  width: 275px;
   padding: 20px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -224,7 +224,7 @@ header {
 .primary-header .primary-navigation a {
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: clamp(10px, 8vw, 25px);
+  font-size: clamp(10px, 8vw, 20px);
 }
 
 .primary-header .primary-navigation a:hover {
